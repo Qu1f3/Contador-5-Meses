@@ -108,7 +108,7 @@ $fechaObjetivo = strtotime("2024-11-01 00:00:00");
 <body>
 
 <div class="contador-container">
-    <h1>Cuenta regresiva de amor</h1>
+    <h1>Cumplimos 5 meses dentro de:</h1>
     <p id="contador"></p>
 </div>
 
