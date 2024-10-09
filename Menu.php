@@ -2,7 +2,6 @@
 // Establecer la fecha objetivo (año, mes, día, hora, minuto, segundo)
 $fechaObjetivo = strtotime("2024-11-01 00:00:00");
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,32 +17,41 @@ $fechaObjetivo = strtotime("2024-11-01 00:00:00");
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #282c34;
-            color: #61dafb;
+            background-color: #fddde6; /* Fondo rosado suave */
+            color: #ff4081; /* Color de texto rosa oscuro */
             text-align: center;
         }
 
         /* Contenedor principal del contador */
         .contador-container {
-            background-color: #20232a;
+            background-color: #ffe4e1; /* Fondo color rosa claro */
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5);
+            border: 2px solid #ff4081;
         }
 
         h1 {
             font-size: 3rem;
             margin-bottom: 20px;
+            color: #e91e63; /* Color de texto rojo/rosado */
         }
 
         p {
             font-size: 2.5rem;
             letter-spacing: 1px;
+        }
+
+        /* Corazones decorativos */
+        .heart {
+            color: #ff4081;
+            font-size: 1.5rem;
+            margin-right: 5px;
         }
 
         /* Ajustes para pantallas más pequeñas */
@@ -84,8 +92,10 @@ $fechaObjetivo = strtotime("2024-11-01 00:00:00");
                 var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
                 // Mostrar el contador
-                document.getElementById("contador").innerHTML = dias + " días, " + horas + " horas, " +
-                    minutos + " minutos y " + segundos + " segundos";
+                document.getElementById("contador").innerHTML = 
+                    "<span class='heart'>&#10084;</span>" + dias + " días, " + horas + " horas, " +
+                    minutos + " minutos y " + segundos + " segundos " + 
+                    "<span class='heart'>&#10084;</span>";
             } else {
                 document.getElementById("contador").innerHTML = "¡La fecha objetivo ya ha pasado!";
             }
@@ -98,7 +108,7 @@ $fechaObjetivo = strtotime("2024-11-01 00:00:00");
 <body>
 
 <div class="contador-container">
-    <h1>Cuenta regresiva</h1>
+    <h1>Cuenta regresiva de amor</h1>
     <p id="contador"></p>
 </div>
 
